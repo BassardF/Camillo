@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0144687F1B326E86002DE786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144687E1B326E86002DE786 /* AppDelegate.swift */; };
 		014468821B326E86002DE786 /* Camillo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 014468801B326E86002DE786 /* Camillo.xcdatamodeld */; };
-		014468841B326E86002DE786 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014468831B326E86002DE786 /* ViewController.swift */; };
+		014468841B326E86002DE786 /* TheatersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014468831B326E86002DE786 /* TheatersViewController.swift */; };
 		014468871B326E86002DE786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014468851B326E86002DE786 /* Main.storyboard */; };
 		014468891B326E86002DE786 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014468881B326E86002DE786 /* Images.xcassets */; };
 		0144688C1B326E86002DE786 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0144688A1B326E86002DE786 /* LaunchScreen.xib */; };
@@ -31,7 +31,7 @@
 		0144687D1B326E86002DE786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0144687E1B326E86002DE786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		014468811B326E86002DE786 /* Camillo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camillo.xcdatamodel; sourceTree = "<group>"; };
-		014468831B326E86002DE786 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		014468831B326E86002DE786 /* TheatersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatersViewController.swift; sourceTree = "<group>"; };
 		014468861B326E86002DE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		014468881B326E86002DE786 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0144688B1B326E86002DE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				0144687E1B326E86002DE786 /* AppDelegate.swift */,
-				014468831B326E86002DE786 /* ViewController.swift */,
+				014468831B326E86002DE786 /* TheatersViewController.swift */,
 				014468851B326E86002DE786 /* Main.storyboard */,
 				014468881B326E86002DE786 /* Images.xcassets */,
 				0144688A1B326E86002DE786 /* LaunchScreen.xib */,
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				014468841B326E86002DE786 /* ViewController.swift in Sources */,
+				014468841B326E86002DE786 /* TheatersViewController.swift in Sources */,
 				0144687F1B326E86002DE786 /* AppDelegate.swift in Sources */,
 				014468821B326E86002DE786 /* Camillo.xcdatamodeld in Sources */,
 			);
