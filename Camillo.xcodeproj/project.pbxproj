@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0144687F1B326E86002DE786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144687E1B326E86002DE786 /* AppDelegate.swift */; };
+		014468821B326E86002DE786 /* Camillo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 014468801B326E86002DE786 /* Camillo.xcdatamodeld */; };
+		014468841B326E86002DE786 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014468831B326E86002DE786 /* ViewController.swift */; };
+		014468871B326E86002DE786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014468851B326E86002DE786 /* Main.storyboard */; };
+		014468891B326E86002DE786 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014468881B326E86002DE786 /* Images.xcassets */; };
+		0144688C1B326E86002DE786 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0144688A1B326E86002DE786 /* LaunchScreen.xib */; };
+		014468981B326E86002DE786 /* CamilloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014468971B326E86002DE786 /* CamilloTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		014468921B326E86002DE786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 014468711B326E86002DE786 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 014468781B326E86002DE786;
+			remoteInfo = Camillo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		014468791B326E86002DE786 /* Camillo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camillo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0144687D1B326E86002DE786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0144687E1B326E86002DE786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		014468811B326E86002DE786 /* Camillo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camillo.xcdatamodel; sourceTree = "<group>"; };
+		014468831B326E86002DE786 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		014468861B326E86002DE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		014468881B326E86002DE786 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0144688B1B326E86002DE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		014468911B326E86002DE786 /* CamilloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamilloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		014468961B326E86002DE786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		014468971B326E86002DE786 /* CamilloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamilloTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		014468761B326E86002DE786 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0144688E1B326E86002DE786 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		014468701B326E86002DE786 = {
+			isa = PBXGroup;
+			children = (
+				0144687B1B326E86002DE786 /* Camillo */,
+				014468941B326E86002DE786 /* CamilloTests */,
+				0144687A1B326E86002DE786 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0144687A1B326E86002DE786 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				014468791B326E86002DE786 /* Camillo.app */,
+				014468911B326E86002DE786 /* CamilloTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0144687B1B326E86002DE786 /* Camillo */ = {
+			isa = PBXGroup;
+			children = (
+				0144687E1B326E86002DE786 /* AppDelegate.swift */,
+				014468831B326E86002DE786 /* ViewController.swift */,
+				014468851B326E86002DE786 /* Main.storyboard */,
+				014468881B326E86002DE786 /* Images.xcassets */,
+				0144688A1B326E86002DE786 /* LaunchScreen.xib */,
+				014468801B326E86002DE786 /* Camillo.xcdatamodeld */,
+				0144687C1B326E86002DE786 /* Supporting Files */,
+			);
+			path = Camillo;
+			sourceTree = "<group>";
+		};
+		0144687C1B326E86002DE786 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0144687D1B326E86002DE786 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		014468941B326E86002DE786 /* CamilloTests */ = {
+			isa = PBXGroup;
+			children = (
+				014468971B326E86002DE786 /* CamilloTests.swift */,
+				014468951B326E86002DE786 /* Supporting Files */,
+			);
+			path = CamilloTests;
+			sourceTree = "<group>";
+		};
+		014468951B326E86002DE786 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				014468961B326E86002DE786 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		014468781B326E86002DE786 /* Camillo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0144689B1B326E86002DE786 /* Build configuration list for PBXNativeTarget "Camillo" */;
+			buildPhases = (
+				014468751B326E86002DE786 /* Sources */,
+				014468761B326E86002DE786 /* Frameworks */,
+				014468771B326E86002DE786 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Camillo;
+			productName = Camillo;
+			productReference = 014468791B326E86002DE786 /* Camillo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		014468901B326E86002DE786 /* CamilloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0144689E1B326E86002DE786 /* Build configuration list for PBXNativeTarget "CamilloTests" */;
+			buildPhases = (
+				0144688D1B326E86002DE786 /* Sources */,
+				0144688E1B326E86002DE786 /* Frameworks */,
+				0144688F1B326E86002DE786 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				014468931B326E86002DE786 /* PBXTargetDependency */,
+			);
+			name = CamilloTests;
+			productName = CamilloTests;
+			productReference = 014468911B326E86002DE786 /* CamilloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		014468711B326E86002DE786 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Frank Bassard";
+				TargetAttributes = {
+					014468781B326E86002DE786 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					014468901B326E86002DE786 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 014468781B326E86002DE786;
+					};
+				};
+			};
+			buildConfigurationList = 014468741B326E86002DE786 /* Build configuration list for PBXProject "Camillo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 014468701B326E86002DE786;
+			productRefGroup = 0144687A1B326E86002DE786 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				014468781B326E86002DE786 /* Camillo */,
+				014468901B326E86002DE786 /* CamilloTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		014468771B326E86002DE786 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014468871B326E86002DE786 /* Main.storyboard in Resources */,
+				0144688C1B326E86002DE786 /* LaunchScreen.xib in Resources */,
+				014468891B326E86002DE786 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0144688F1B326E86002DE786 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		014468751B326E86002DE786 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014468841B326E86002DE786 /* ViewController.swift in Sources */,
+				0144687F1B326E86002DE786 /* AppDelegate.swift in Sources */,
+				014468821B326E86002DE786 /* Camillo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0144688D1B326E86002DE786 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				014468981B326E86002DE786 /* CamilloTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		014468931B326E86002DE786 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 014468781B326E86002DE786 /* Camillo */;
+			targetProxy = 014468921B326E86002DE786 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		014468851B326E86002DE786 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				014468861B326E86002DE786 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0144688A1B326E86002DE786 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0144688B1B326E86002DE786 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		014468991B326E86002DE786 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0144689A1B326E86002DE786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0144689C1B326E86002DE786 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Camillo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0144689D1B326E86002DE786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Camillo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0144689F1B326E86002DE786 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CamilloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camillo.app/Camillo";
+			};
+			name = Debug;
+		};
+		014468A01B326E86002DE786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CamilloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camillo.app/Camillo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		014468741B326E86002DE786 /* Build configuration list for PBXProject "Camillo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				014468991B326E86002DE786 /* Debug */,
+				0144689A1B326E86002DE786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0144689B1B326E86002DE786 /* Build configuration list for PBXNativeTarget "Camillo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0144689C1B326E86002DE786 /* Debug */,
+				0144689D1B326E86002DE786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0144689E1B326E86002DE786 /* Build configuration list for PBXNativeTarget "CamilloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0144689F1B326E86002DE786 /* Debug */,
+				014468A01B326E86002DE786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		014468801B326E86002DE786 /* Camillo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				014468811B326E86002DE786 /* Camillo.xcdatamodel */,
+			);
+			currentVersion = 014468811B326E86002DE786 /* Camillo.xcdatamodel */;
+			path = Camillo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 014468711B326E86002DE786 /* Project object */;
+}
