@@ -10,10 +10,15 @@
 		0144687F1B326E86002DE786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0144687E1B326E86002DE786 /* AppDelegate.swift */; };
 		014468821B326E86002DE786 /* Camillo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 014468801B326E86002DE786 /* Camillo.xcdatamodeld */; };
 		014468841B326E86002DE786 /* TheatersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014468831B326E86002DE786 /* TheatersViewController.swift */; };
-		014468871B326E86002DE786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014468851B326E86002DE786 /* Main.storyboard */; };
 		014468891B326E86002DE786 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014468881B326E86002DE786 /* Images.xcassets */; };
 		0144688C1B326E86002DE786 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0144688A1B326E86002DE786 /* LaunchScreen.xib */; };
 		014468981B326E86002DE786 /* CamilloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014468971B326E86002DE786 /* CamilloTests.swift */; };
+		01E5A98E1B33A4A10002F2CD /* PegsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */; };
+		01E5A9901B33A6AE0002F2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E5A98F1B33A6AE0002F2CD /* Main.storyboard */; };
+		01E5A9921B33B7270002F2CD /* NewPegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E5A9911B33B7270002F2CD /* NewPegViewController.swift */; };
+		01FBBE0A1B337F14006333BE /* NewTheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBBE091B337F14006333BE /* NewTheaterViewController.swift */; };
+		01FBBE151B338621006333BE /* TheaterServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBBE141B338621006333BE /* TheaterServices.swift */; };
+		01FBBE171B33862C006333BE /* PegServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FBBE161B33862C006333BE /* PegServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +37,17 @@
 		0144687E1B326E86002DE786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		014468811B326E86002DE786 /* Camillo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camillo.xcdatamodel; sourceTree = "<group>"; };
 		014468831B326E86002DE786 /* TheatersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatersViewController.swift; sourceTree = "<group>"; };
-		014468861B326E86002DE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		014468881B326E86002DE786 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0144688B1B326E86002DE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		014468911B326E86002DE786 /* CamilloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamilloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		014468961B326E86002DE786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		014468971B326E86002DE786 /* CamilloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamilloTests.swift; sourceTree = "<group>"; };
+		01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PegsViewController.swift; sourceTree = "<group>"; };
+		01E5A98F1B33A6AE0002F2CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		01E5A9911B33B7270002F2CD /* NewPegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPegViewController.swift; sourceTree = "<group>"; };
+		01FBBE091B337F14006333BE /* NewTheaterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTheaterViewController.swift; sourceTree = "<group>"; };
+		01FBBE141B338621006333BE /* TheaterServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TheaterServices.swift; path = ../TheaterServices.swift; sourceTree = "<group>"; };
+		01FBBE161B33862C006333BE /* PegServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PegServices.swift; path = ../PegServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +89,11 @@
 		0144687B1B326E86002DE786 /* Camillo */ = {
 			isa = PBXGroup;
 			children = (
-				0144687E1B326E86002DE786 /* AppDelegate.swift */,
-				014468831B326E86002DE786 /* TheatersViewController.swift */,
-				014468851B326E86002DE786 /* Main.storyboard */,
+				01FBBE181B338633006333BE /* Services */,
+				01FBBE081B337EB8006333BE /* Controllers */,
 				014468881B326E86002DE786 /* Images.xcassets */,
 				0144688A1B326E86002DE786 /* LaunchScreen.xib */,
+				01E5A98F1B33A6AE0002F2CD /* Main.storyboard */,
 				014468801B326E86002DE786 /* Camillo.xcdatamodeld */,
 				0144687C1B326E86002DE786 /* Supporting Files */,
 			);
@@ -93,6 +103,7 @@
 		0144687C1B326E86002DE786 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0144687E1B326E86002DE786 /* AppDelegate.swift */,
 				0144687D1B326E86002DE786 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +124,26 @@
 				014468961B326E86002DE786 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01FBBE081B337EB8006333BE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				014468831B326E86002DE786 /* TheatersViewController.swift */,
+				01E5A9911B33B7270002F2CD /* NewPegViewController.swift */,
+				01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */,
+				01FBBE091B337F14006333BE /* NewTheaterViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		01FBBE181B338633006333BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01FBBE161B33862C006333BE /* PegServices.swift */,
+				01FBBE141B338621006333BE /* TheaterServices.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				014468871B326E86002DE786 /* Main.storyboard in Resources */,
+				01E5A9901B33A6AE0002F2CD /* Main.storyboard in Resources */,
 				0144688C1B326E86002DE786 /* LaunchScreen.xib in Resources */,
 				014468891B326E86002DE786 /* Images.xcassets in Resources */,
 			);
@@ -215,9 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FBBE151B338621006333BE /* TheaterServices.swift in Sources */,
 				014468841B326E86002DE786 /* TheatersViewController.swift in Sources */,
+				01E5A9921B33B7270002F2CD /* NewPegViewController.swift in Sources */,
+				01FBBE171B33862C006333BE /* PegServices.swift in Sources */,
 				0144687F1B326E86002DE786 /* AppDelegate.swift in Sources */,
+				01E5A98E1B33A4A10002F2CD /* PegsViewController.swift in Sources */,
 				014468821B326E86002DE786 /* Camillo.xcdatamodeld in Sources */,
+				01FBBE0A1B337F14006333BE /* NewTheaterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +276,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		014468851B326E86002DE786 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				014468861B326E86002DE786 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0144688A1B326E86002DE786 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,6 +441,7 @@
 				0144689D1B326E86002DE786 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0144689E1B326E86002DE786 /* Build configuration list for PBXNativeTarget "CamilloTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +450,7 @@
 				014468A01B326E86002DE786 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
