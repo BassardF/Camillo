@@ -41,4 +41,22 @@ class PegServices: NSObject {
             println("Could not save \(error), \(error?.userInfo)")
         }
     }
+    
+    static func count() -> Int{
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        let fetchRequest = NSFetchRequest(entityName:"Peg")
+        
+        var error: NSError?
+        
+        var count = managedContext.countForFetchRequest(fetchRequest, error: &error)
+        
+        if(error == nil){
+            return count
+        }
+        
+        return 0
+    }
 }

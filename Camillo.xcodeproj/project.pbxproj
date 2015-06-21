@@ -13,6 +13,8 @@
 		014468891B326E86002DE786 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014468881B326E86002DE786 /* Images.xcassets */; };
 		0144688C1B326E86002DE786 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0144688A1B326E86002DE786 /* LaunchScreen.xib */; };
 		014468981B326E86002DE786 /* CamilloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014468971B326E86002DE786 /* CamilloTests.swift */; };
+		01DDC68D1B33E49A00A52EC3 /* ExplorePegsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DDC68C1B33E49A00A52EC3 /* ExplorePegsPageViewController.swift */; };
+		01DDC68F1B33E7DB00A52EC3 /* DisplayPegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DDC68E1B33E7DB00A52EC3 /* DisplayPegViewController.swift */; };
 		01E5A98E1B33A4A10002F2CD /* PegsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */; };
 		01E5A9901B33A6AE0002F2CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E5A98F1B33A6AE0002F2CD /* Main.storyboard */; };
 		01E5A9921B33B7270002F2CD /* NewPegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E5A9911B33B7270002F2CD /* NewPegViewController.swift */; };
@@ -42,6 +44,8 @@
 		014468911B326E86002DE786 /* CamilloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamilloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		014468961B326E86002DE786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		014468971B326E86002DE786 /* CamilloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamilloTests.swift; sourceTree = "<group>"; };
+		01DDC68C1B33E49A00A52EC3 /* ExplorePegsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplorePegsPageViewController.swift; sourceTree = "<group>"; };
+		01DDC68E1B33E7DB00A52EC3 /* DisplayPegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPegViewController.swift; sourceTree = "<group>"; };
 		01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PegsViewController.swift; sourceTree = "<group>"; };
 		01E5A98F1B33A6AE0002F2CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		01E5A9911B33B7270002F2CD /* NewPegViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPegViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				01E5A9911B33B7270002F2CD /* NewPegViewController.swift */,
 				01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */,
 				01FBBE091B337F14006333BE /* NewTheaterViewController.swift */,
+				01DDC68C1B33E49A00A52EC3 /* ExplorePegsPageViewController.swift */,
+				01DDC68E1B33E7DB00A52EC3 /* DisplayPegViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FBBE151B338621006333BE /* TheaterServices.swift in Sources */,
+				01DDC68D1B33E49A00A52EC3 /* ExplorePegsPageViewController.swift in Sources */,
+				01DDC68F1B33E7DB00A52EC3 /* DisplayPegViewController.swift in Sources */,
 				014468841B326E86002DE786 /* TheatersViewController.swift in Sources */,
 				01E5A9921B33B7270002F2CD /* NewPegViewController.swift in Sources */,
 				01FBBE171B33862C006333BE /* PegServices.swift in Sources */,

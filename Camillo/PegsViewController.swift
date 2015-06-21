@@ -12,6 +12,7 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.title = theater!.valueForKey("name") as? String
         pegs = PegServices.getPegs(theater!)
         tableView.reloadData()
     }
@@ -20,6 +21,11 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(segue.identifier == "newPeg"){
             let pegsVC = segue.destinationViewController as! NewPegViewController
             pegsVC.theater = theater
+        } else if(segue.identifier == "exploreSegue"){
+            let pegsVC = segue.destinationViewController as! ExplorePegsPageViewController
+            pegsVC.theater = theater!
+            pegsVC.pegs = pegs
+            pegsVC.current = 0
         }
     }
     
@@ -31,7 +37,8 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCellWithIdentifier("pegCell", forIndexPath: indexPath) as! UITableViewCell
         let peg = pegs[indexPath.row] as NSManagedObject
         cell.textLabel?.text = peg.valueForKey("key") as? String
-        
+        cell.detailTextLabel!.text = theater!.valueForKey("name") as? String        
+        cell.textLabel?.textColor = UIColor.whiteColor()
         return cell
     }
     
