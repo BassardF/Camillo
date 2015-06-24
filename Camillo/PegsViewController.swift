@@ -12,6 +12,7 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.navigationController!.navigationBar.hidden = false
         self.title = theater!.valueForKey("name") as? String
         pegs = PegServices.getPegs(theater!)
         tableView.reloadData()
