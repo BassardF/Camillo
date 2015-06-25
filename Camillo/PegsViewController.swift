@@ -26,7 +26,6 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
             let pegsVC = segue.destinationViewController as! ExplorePegsPageViewController
             pegsVC.theater = theater!
             pegsVC.pegs = pegs
-            pegsVC.current = 0
         }
     }
     

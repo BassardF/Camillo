@@ -10,7 +10,6 @@ class NewTheaterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "New Theater"
     }
 
     override func didReceiveMemoryWarning() {

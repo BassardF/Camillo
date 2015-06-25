@@ -6,7 +6,6 @@ class ExplorePegsPageViewController: UIPageViewController, UIPageViewControllerD
     let displayUnit : String = "pageView"
     var theater : NSManagedObject?
     var pegs : [NSManagedObject] = [NSManagedObject]()
-    var current = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,17 +14,27 @@ class ExplorePegsPageViewController: UIPageViewController, UIPageViewControllerD
         self.delegate = self
         
         let ctrl = self.getViewController()
-        ctrl.peg = pegs[current]
+        ctrl.peg = pegs[0]
+        ctrl.index = 0
+        var key = pegs[0].valueForKey("key") as! String
+        var name = pegs[0].valueForKey("name") as! String
+        self.title = "\(key) : \(name)"
         let ctrls: NSArray = [ctrl]
         self.setViewControllers(ctrls as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?{
-
+        
+        var oldCtrl = viewController as! DisplayPegViewController
+        var current = oldCtrl.index
         if(current > 0){
             current =  current - 1;
             var ctrl = self.getViewController()
             ctrl.peg = pegs[current]
+            ctrl.index = current
+            var key = pegs[current].valueForKey("key") as! String
+            var name = pegs[current].valueForKey("name") as! String
+            self.title = "\(key) : \(name)"
             return ctrl
         } else {
             return nil
@@ -33,11 +42,16 @@ class ExplorePegsPageViewController: UIPageViewController, UIPageViewControllerD
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController?{
-        
+        var oldCtrl = viewController as! DisplayPegViewController
+        var current = oldCtrl.index
         if(current < pegs.count - 1){
             current = current + 1;
             var ctrl = self.getViewController()
             ctrl.peg = pegs[current]
+            ctrl.index = current
+            var key = pegs[current].valueForKey("key") as! String
+            var name = pegs[current].valueForKey("name") as! String
+            self.title = "\(key) : \(name)"
             return ctrl
         } else {
             return nil
@@ -47,13 +61,5 @@ class ExplorePegsPageViewController: UIPageViewController, UIPageViewControllerD
     
     func getViewController() -> DisplayPegViewController! {
         return self.storyboard!.instantiateViewControllerWithIdentifier(displayUnit) as! DisplayPegViewController
-    }
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return self.current
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
     }
 }
