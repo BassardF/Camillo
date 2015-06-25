@@ -4,6 +4,7 @@ import CoreData
 class ExplorePegsPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     let displayUnit : String = "pageView"
+    var index : Int!
     var theater : NSManagedObject?
     var pegs : [NSManagedObject] = [NSManagedObject]()
     
@@ -14,10 +15,10 @@ class ExplorePegsPageViewController: UIPageViewController, UIPageViewControllerD
         self.delegate = self
         
         let ctrl = self.getViewController()
-        ctrl.peg = pegs[0]
-        ctrl.index = 0
-        var key = pegs[0].valueForKey("key") as! String
-        var name = pegs[0].valueForKey("name") as! String
+        ctrl.peg = pegs[index]
+        ctrl.index = index
+        var key = pegs[index].valueForKey("key") as! String
+        var name = pegs[index].valueForKey("name") as! String
         self.title = "\(key) : \(name)"
         let ctrls: NSArray = [ctrl]
         self.setViewControllers(ctrls as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)

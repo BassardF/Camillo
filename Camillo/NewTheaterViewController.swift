@@ -10,6 +10,7 @@ class NewTheaterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
     }
 
     override func didReceiveMemoryWarning() {

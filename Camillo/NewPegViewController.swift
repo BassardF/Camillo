@@ -7,11 +7,12 @@ class NewPegViewController: UIViewController, UIImagePickerControllerDelegate, U
     var theater : NSManagedObject?
     @IBOutlet weak var key: UITextField!
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var previewImage: UIImageView!
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        key.attributedPlaceholder = NSAttributedString(string:"Key", attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagePicker.allowsEditing = false
@@ -21,19 +22,16 @@ class NewPegViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    @IBAction func create(sender: AnyObject) {
-        var imageData = UIImagePNGRepresentation(previewImage.image)
-        PegServices.newPeg(theater!, key: key.text, name: name.text, image: imageData)
-    }
-    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
         if(mediaType.isEqualToString(kUTTypeImage as! String)) {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            previewImage.image = image
+            var imageData = UIImagePNGRepresentation(image)
+            PegServices.newPeg(theater!, key: key.text, name: name.text, image: imageData)
         }
         
         self.dismissViewControllerAnimated(true, completion: nil)
+        navigationController?.popViewControllerAnimated(true)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {

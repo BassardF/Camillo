@@ -134,9 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				014468831B326E86002DE786 /* TheatersViewController.swift */,
-				01E5A9911B33B7270002F2CD /* NewPegViewController.swift */,
-				01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */,
 				01FBBE091B337F14006333BE /* NewTheaterViewController.swift */,
+				01E5A98D1B33A4A10002F2CD /* PegsViewController.swift */,
+				01E5A9911B33B7270002F2CD /* NewPegViewController.swift */,
 				01DDC68C1B33E49A00A52EC3 /* ExplorePegsPageViewController.swift */,
 				01DDC68E1B33E7DB00A52EC3 /* DisplayPegViewController.swift */,
 			);
