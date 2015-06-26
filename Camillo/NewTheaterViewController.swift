@@ -11,6 +11,10 @@ class NewTheaterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
+        stringButton.setTitleColor(UIColor(red: 127/255, green: 0, blue: 127/255, alpha: 1.0) , forState: UIControlState.Normal)
+        numberButton.setTitleColor(UIColor.lightGrayColor() , forState: UIControlState.Normal)
+        key = "string"
+        name.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,15 +27,19 @@ class NewTheaterViewController: UIViewController {
     }
 
     @IBAction func stringClick(sender: UIButton) {
-        numberButton.setImage(UIImage(named: "number"), forState: UIControlState.Normal)
-        stringButton.setImage(UIImage(named: "string-s"), forState: UIControlState.Normal)
+        stringButton.setTitleColor(UIColor(red: 127/255, green: 0, blue: 127/255, alpha: 1.0) , forState: UIControlState.Normal)
+        numberButton.setTitleColor(UIColor.lightGrayColor() , forState: UIControlState.Normal)
         key = "string"
     }
     
     @IBAction func numberClick(sender: UIButton) {
-        numberButton.setImage(UIImage(named: "number-s"), forState: UIControlState.Normal)
-        stringButton.setImage(UIImage(named: "string"), forState: UIControlState.Normal)
+        numberButton.setTitleColor(UIColor(red: 127/255, green: 0, blue: 127/255, alpha: 1.0) , forState: UIControlState.Normal)
+        stringButton.setTitleColor(UIColor.lightGrayColor() , forState: UIControlState.Normal)
         key = "number"
     }
     
+    @IBAction func doneEnteringName(sender: AnyObject) {
+        TheaterServices.newTheater(key, name: name.text)
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
 }

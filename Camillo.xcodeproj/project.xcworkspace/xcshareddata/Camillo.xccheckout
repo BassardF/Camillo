@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>3B94FCC4-A8A3-4141-8097-3E51810D3FD2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Camillo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>90B010DDFC885F55F350054C8B821755330C3827</key>
 		<string>https://github.com/BassardF/Camillo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Camillo.xcodeproj/project.xcworkspace</string>
+	<string>Camillo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>90B010DDFC885F55F350054C8B821755330C3827</key>

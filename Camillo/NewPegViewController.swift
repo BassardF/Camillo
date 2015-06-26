@@ -16,6 +16,7 @@ class NewPegViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagePicker.allowsEditing = false
+        name.becomeFirstResponder()
     }
     
     @IBAction func picturePicker(sender: UIButton) {
@@ -37,4 +38,14 @@ class NewPegViewController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func exitFirst(sender: AnyObject) {
+        key.becomeFirstResponder()
+    }
+    
+    
+    @IBAction func exitSecond(sender: AnyObject) {
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
 }
