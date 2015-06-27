@@ -59,4 +59,11 @@ class PegServices: NSObject {
         
         return 0
     }
+    
+    static func deletePeg(peg : NSManagedObject){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext!
+        managedContext.deleteObject(peg)
+        managedContext.save(nil)
+    }
 }

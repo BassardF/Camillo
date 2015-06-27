@@ -14,7 +14,8 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController!.navigationBar.hidden = false
-        self.title = theater!.valueForKey("name") as? String
+        var title = theater!.valueForKey("name") as! String
+        self.title = "\(title)'s pegs"
         pegs = PegServices.getPegs(theater!)
         tableView.reloadData()
     }
@@ -48,5 +49,18 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selected = indexPath.row
         performSegueWithIdentifier("exploreSegue", sender: self)
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            var tmp = pegs[indexPath.row]
+            pegs.removeAtIndex(indexPath.row)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            PegServices.deletePeg(tmp)
+        }
     }
 }

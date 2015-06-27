@@ -50,9 +50,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.1529411765" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="Sx0-zu-tig" kind="show" identifier="showPegs" id="Tug-pq-Lw9"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -105,6 +102,7 @@
                         <outlet property="pegCount" destination="Xkl-1s-awe" id="6ve-Ao-icW"/>
                         <outlet property="tableView" destination="xW8-j6-XbT" id="Syk-QV-CYG"/>
                         <outlet property="theaterCount" destination="uVg-U5-6XF" id="7e3-8n-Wix"/>
+                        <segue destination="Sx0-zu-tig" kind="show" identifier="showPegs" id="jfA-Rz-i0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

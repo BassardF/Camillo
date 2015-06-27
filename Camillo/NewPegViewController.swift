@@ -11,6 +11,11 @@ class NewPegViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var keyValue = theater!.valueForKey("key") as! String
+        if(keyValue == "number"){
+            self.key.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        }
+        
         key.attributedPlaceholder = NSAttributedString(string:"Key", attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         name.attributedPlaceholder = NSAttributedString(string:"Name", attributes:[NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         imagePicker.delegate = self
