@@ -7,6 +7,7 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     var pegs : [NSManagedObject] = [NSManagedObject]()
     @IBOutlet weak var tableView: UITableView!
     var selected = 0
+    @IBOutlet var tooltipView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,10 +15,14 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController!.navigationBar.hidden = false
-        let title = theater!.valueForKey("name") as! String
-        self.title = "\(title)'s pegs"
+        self.title = theater!.valueForKey("name") as? String
         pegs = PegServices.getPegs(theater!)
         tableView.reloadData()
+        if(pegs.count > 0){
+            tooltipView.hidden = true;
+        } else {
+            tooltipView.hidden = false;
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -61,6 +66,11 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
             pegs.removeAtIndex(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             PegServices.deletePeg(tmp)
+            if(pegs.count > 0){
+                tooltipView.hidden = true;
+            } else {
+                tooltipView.hidden = false;
+            }
         }
     }
 }

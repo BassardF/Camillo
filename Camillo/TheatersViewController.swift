@@ -6,7 +6,7 @@ class TheaterViewController: UIViewController, UITableViewDelegate, UITableViewD
     var theaters : [NSManagedObject] = [NSManagedObject]()
     var selectedRow = 0
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet var tooltipView: UIView!
     @IBOutlet weak var theaterCount: UILabel!
     @IBOutlet weak var pegCount: UILabel!
     
@@ -22,6 +22,11 @@ class TheaterViewController: UIViewController, UITableViewDelegate, UITableViewD
         theaters = TheaterServices.getTheaters()
         theaterCount.text = String(theaters.count)
         pegCount.text = String(PegServices.count())
+        if(theaters.count != 0){
+            tooltipView.hidden = true;
+        } else {
+            tooltipView.hidden = false;
+        }
         tableView.reloadData()
     }
 
@@ -60,6 +65,13 @@ class TheaterViewController: UIViewController, UITableViewDelegate, UITableViewD
             theaters.removeAtIndex(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             TheaterServices.deleteTheater(tmp)
+            theaterCount.text = String(theaters.count)
+            pegCount.text = String(PegServices.count())
+            if(theaters.count != 0){
+                tooltipView.hidden = true;
+            } else {
+                tooltipView.hidden = false;
+            }
         }
     }
 

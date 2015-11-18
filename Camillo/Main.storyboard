@@ -99,6 +99,24 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V3U-jL-t1f">
+                                <rect key="frame" x="16" y="8" width="349" height="142"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow-top" translatesAutoresizingMaskIntoConstraints="NO" id="ice-mg-g6Y">
+                                        <rect key="frame" x="316" y="0.0" width="25" height="25"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create your first theater" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTP-3j-bkn">
+                                        <rect key="frame" x="137" y="4" width="171" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.1529411765" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.1529411765" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,6 +135,7 @@
                         <outlet property="pegCount" destination="Xkl-1s-awe" id="6ve-Ao-icW"/>
                         <outlet property="tableView" destination="xW8-j6-XbT" id="Syk-QV-CYG"/>
                         <outlet property="theaterCount" destination="uVg-U5-6XF" id="7e3-8n-Wix"/>
+                        <outlet property="tooltipView" destination="V3U-jL-t1f" id="0Z2-1Q-Z3R"/>
                         <segue destination="Sx0-zu-tig" kind="show" identifier="showPegs" id="jfA-Rz-i0k"/>
                     </connections>
                 </viewController>
@@ -252,12 +271,30 @@
                                     <outlet property="delegate" destination="Sx0-zu-tig" id="IMF-m8-jMu"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-Ji-YBS">
+                                <rect key="frame" x="0.0" y="8" width="375" height="365"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow-top" translatesAutoresizingMaskIntoConstraints="NO" id="phS-Dt-v0B">
+                                        <rect key="frame" x="336" y="2" width="25" height="25"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create your first peg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLK-Nz-mjk">
+                                        <rect key="frame" x="179" y="4" width="149" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.14117647059999999" green="0.1529411765" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.1529411765" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="D3r-19-YV5">
-                        <barButtonItem key="rightBarButtonItem" image="temple-22" id="B0D-4h-Cmd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="B0D-4h-Cmd">
                             <connections>
                                 <segue destination="ooq-fx-BOn" kind="show" identifier="newPeg" id="XCi-cP-HP1"/>
                             </connections>
@@ -265,6 +302,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ulS-2I-EFi" id="u0F-j7-tsQ"/>
+                        <outlet property="tooltipView" destination="Ogt-Ji-YBS" id="Ow0-3o-tlV"/>
                         <segue destination="H4O-fR-qqO" kind="show" identifier="exploreSegue" id="IaI-WF-k9p"/>
                     </connections>
                 </viewController>
@@ -332,13 +370,6 @@
                                     <action selector="doneEnteringName:" destination="Mwu-HW-6eR" eventType="editingDidEndOnExit" id="XdI-T4-i2R"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keys :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="min-Ov-6dg">
-                                <rect key="frame" x="79" y="94" width="41" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWX-1W-r7m">
                                 <rect key="frame" x="79" y="165" width="217" height="1"/>
                                 <animations/>
@@ -391,6 +422,13 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keys :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="min-Ov-6dg">
+                                <rect key="frame" x="79" y="94" width="41" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.1529411765" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -439,7 +477,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-top" width="52" height="64"/>
         <image name="castle-66" width="22" height="22"/>
-        <image name="temple-22" width="25" height="22"/>
     </resources>
 </document>
