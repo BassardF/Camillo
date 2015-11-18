@@ -12,7 +12,7 @@ class DisplayPegViewController: UIViewController {
         
         super.viewDidLoad()
         
-        var data = peg.valueForKey("image") as? NSData
+        let data = peg.valueForKey("image") as? NSData
         image.image =  UIImage(data: data!)
     }
     

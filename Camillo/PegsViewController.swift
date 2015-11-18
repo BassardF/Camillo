@@ -14,7 +14,7 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController!.navigationBar.hidden = false
-        var title = theater!.valueForKey("name") as! String
+        let title = theater!.valueForKey("name") as! String
         self.title = "\(title)'s pegs"
         pegs = PegServices.getPegs(theater!)
         tableView.reloadData()
@@ -37,7 +37,7 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("pegCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("pegCell", forIndexPath: indexPath)
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         let peg = pegs[indexPath.row] as NSManagedObject
         cell.textLabel?.text = peg.valueForKey("key") as? String
@@ -57,7 +57,7 @@ class PegsViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            var tmp = pegs[indexPath.row]
+            let tmp = pegs[indexPath.row]
             pegs.removeAtIndex(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             PegServices.deletePeg(tmp)

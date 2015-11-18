@@ -16,9 +16,10 @@ class TheaterServices: NSObject {
         theater.setValue(name, forKey: "name")
         theater.setValue(key, forKey: "key")
         
-        var error: NSError?
-        if !managedContext.save(&error) {
-            println("Could not save \(error), \(error?.userInfo)")
+        do {
+            try managedContext.save()
+        } catch _{
+            print("Saving issue")
         }
     }
     
@@ -29,20 +30,46 @@ class TheaterServices: NSObject {
         
         let fetchRequest = NSFetchRequest(entityName:"Theater")
         
-        var error: NSError?
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
         
-        if let results = fetchedResults {
-            return results
-        } else {
+        do {
+            let fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            if let results = fetchedResults {
+                return results
+            } else {
+                return [];
+            }
+        } catch _{
+            print("Saving issue")
             return [];
         }
+        
     }
     
     static func deleteTheater(theater : NSManagedObject){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
+        // Delete pegs
+        let fetchRequest = NSFetchRequest(entityName:"Peg")
+        let predicate = NSPredicate(format: "theater = %@", theater)
+        fetchRequest.predicate = predicate
+        
+        do {
+            let fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            if let results = fetchedResults {
+                for res in results {
+                    PegServices.deletePeg(res)
+                }
+            }
+        } catch _{
+            print("Failed : fetching results")
+        }
+        // Delete theater
         managedContext.deleteObject(theater)
-        managedContext.save(nil)
+        do {
+            try managedContext.save()
+        } catch {
+            print("Deleting issue")
+        }
+
     }
 }

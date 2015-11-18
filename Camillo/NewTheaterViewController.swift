@@ -22,7 +22,7 @@ class NewTheaterViewController: UIViewController {
     }
 
     @IBAction func create(sender: UIButton) {
-        TheaterServices.newTheater(key, name: name.text)
+        TheaterServices.newTheater(key, name: name.text!)
         navigationController?.popToRootViewControllerAnimated(true)
     }
 
@@ -39,7 +39,7 @@ class NewTheaterViewController: UIViewController {
     }
     
     @IBAction func doneEnteringName(sender: AnyObject) {
-        TheaterServices.newTheater(key, name: name.text)
+        TheaterServices.newTheater(key, name: name.text!)
         navigationController?.popToRootViewControllerAnimated(true)
     }
 }

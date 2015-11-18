@@ -11,7 +11,7 @@ class NewPegViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var keyValue = theater!.valueForKey("key") as! String
+        let keyValue = theater!.valueForKey("key") as! String
         if(keyValue == "number"){
             self.key.keyboardType = UIKeyboardType.NumbersAndPunctuation
         }
@@ -28,12 +28,12 @@ class NewPegViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let mediaType = info[UIImagePickerControllerMediaType] as! NSString
-        if(mediaType.isEqualToString(kUTTypeImage as! String)) {
+        if(mediaType.isEqualToString(kUTTypeImage as String)) {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            var imageData = UIImagePNGRepresentation(image)
-            PegServices.newPeg(theater!, key: key.text, name: name.text, image: imageData)
+            let imageData = UIImagePNGRepresentation(image)
+            PegServices.newPeg(theater!, key: key.text!, name: name.text!, image: imageData!)
         }
         
         self.dismissViewControllerAnimated(true, completion: nil)

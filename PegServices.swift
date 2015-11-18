@@ -12,12 +12,15 @@ class PegServices: NSObject {
         let predicate = NSPredicate(format: "theater = %@", theater)
         fetchRequest.predicate = predicate
         
-        var error: NSError?
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as? [NSManagedObject]
-        
-        if let results = fetchedResults {
-            return results
-        } else {
+        do {
+            let fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject]
+            if let results = fetchedResults {
+                return results
+            } else {
+                return [];
+            }
+        } catch _{
+            print("Failed : fetching results")
             return [];
         }
     }
@@ -36,9 +39,10 @@ class PegServices: NSObject {
         peg.setValue(image, forKey: "image")
         peg.setValue(theater, forKey: "theater")
         
-        var error: NSError?
-        if !managedContext.save(&error) {
-            println("Could not save \(error), \(error?.userInfo)")
+        do {
+            try managedContext.save()
+        } catch {
+            print("Could not save")
         }
     }
     
@@ -51,7 +55,7 @@ class PegServices: NSObject {
         
         var error: NSError?
         
-        var count = managedContext.countForFetchRequest(fetchRequest, error: &error)
+        let count = managedContext.countForFetchRequest(fetchRequest, error: &error)
         
         if(error == nil){
             return count
@@ -64,6 +68,11 @@ class PegServices: NSObject {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         managedContext.deleteObject(peg)
-        managedContext.save(nil)
+        do {
+            try managedContext.save()
+        } catch _{
+            print("Could not delete peg")
+        }
+
     }
 }

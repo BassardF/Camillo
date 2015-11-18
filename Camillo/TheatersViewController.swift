@@ -30,7 +30,7 @@ class TheaterViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         let theater = theaters[indexPath.row] as NSManagedObject
         cell.textLabel?.text = theater.valueForKey("name") as? String
         cell.textLabel?.textColor = UIColor.whiteColor()
@@ -56,7 +56,7 @@ class TheaterViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            var tmp = theaters[indexPath.row]
+            let tmp = theaters[indexPath.row]
             theaters.removeAtIndex(indexPath.row)
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             TheaterServices.deleteTheater(tmp)
