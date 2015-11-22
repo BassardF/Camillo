@@ -9,7 +9,7 @@
     <entity name="Theater" syncable="YES">
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="peg" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Peg" inverseName="theater" inverseEntity="Peg" syncable="YES"/>
+        <relationship name="peg" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Peg" inverseName="theater" inverseEntity="Peg" syncable="YES"/>
     </entity>
     <elements>
         <element name="Peg" positionX="-54" positionY="9" width="128" height="105"/>
